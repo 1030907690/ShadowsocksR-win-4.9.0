@@ -1,6 +1,6 @@
 @Echo Off
 Title 从GitHub云端更新 SS 配置文件
-python ssr_update.py
+ssr_update.exe
 del "..\gui-config.json_backup"
 ren "..\gui-config.json"  gui-config.json_backup
 certutil -decode %~dp0ssconfig.txt %~dp0gui-config.json

@@ -5,4 +5,4 @@
 - 使用ssr_update.bat需安装python3环境，并且安装requests和BeautifulSoup模块。
 
 
-- 2019年12月23日21:11:32 更新   ssr_update.py 已打包成exe无需安装环境可直接执行ssr_update.exe
+- 2019年12月23日21:11:32 更新   ssr_update.py 已打包成exe无需安装环境可直接执行ssr_update.bat

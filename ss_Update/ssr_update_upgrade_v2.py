@@ -62,34 +62,30 @@ if __name__ == '__main__':
             break
         file_template += mystr;
 
-    ssr_domain = "https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7";
+    ssr_domain = "https://github.com/Alvin9999/new-pac/wiki/ss免费账号";
 
-    try:
-        content_string = "";
-        content = requests.get(ssr_domain);
-        # print(content.status_code)
-        if content.status_code == 200:
-            # print(content.text)
-            # 初始化并制定解析器
-            soup = BeautifulSoup(content.text, "lxml");
-            tableContent = soup.table;
-            tr_arr = tableContent.find_all("tr");
-            for tr in tr_arr:
-                tds = tr.find_all('td');
-                if tds and len(tds) > 6:
-                    uid = str(uuid.uuid4())
-                    suid = ''.join(uid.split('-'))
-                    content_string += account_template.replace("${id}",suid).replace("${server}",str(tds[1].get_text())).replace("${server_port}",tds[2].get_text()).replace("${password}",tds[3].get_text()).replace("${method}",tds[4].get_text()).replace("${protocol}",tds[5].get_text()).replace("${obfs}",tds[6].get_text())+","
+    content_string = "";
+    content = requests.get(ssr_domain);
+    # print(content.status_code)
+    if content.status_code == 200:
+        # print(content.text)
+        # 初始化并制定解析器
+        soup = BeautifulSoup(content.text, "lxml");
+        tableContent = soup.table;
+        tr_arr = tableContent.find_all("tr");
+        for tr in tr_arr:
+            tds = tr.find_all('td');
+            if tds and len(tds) > 6:
+                uid = str(uuid.uuid4())
+                suid = ''.join(uid.split('-'))
+                content_string += account_template.replace("${id}",suid).replace("${server}",str(tds[1].get_text())).replace("${server_port}",tds[2].get_text()).replace("${password}",tds[3].get_text()).replace("${method}",tds[4].get_text()).replace("${protocol}",tds[5].get_text()).replace("${obfs}",tds[6].get_text())+","
 
-            final_content_string = content_string[0:len(content_string) -1]
-            json = file_template.replace("${account}",final_content_string);
-            print(json)
-            if os.path.exists("../gui-config.json"):
-                os.remove("../gui-config.json")
-            write_to_file("../gui-config.json",json);
-        else:
-            print("访问ssr帐号失败!")
-    except Exception as e:
-        print("program error %s " % e)
-    finally:
-        print("finally print!")
+        final_content_string = content_string[0:len(content_string) -1]
+        json = file_template.replace("${account}",final_content_string);
+        #print(json)
+        if os.path.exists("../gui-config.json"):
+            os.remove("../gui-config.json")
+        write_to_file("../gui-config.json",json);
+    else:
+        print("访问ssr帐号失败!")
+

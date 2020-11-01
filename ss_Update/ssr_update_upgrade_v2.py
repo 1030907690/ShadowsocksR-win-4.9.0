@@ -83,9 +83,9 @@ if __name__ == '__main__':
         final_content_string = content_string[0:len(content_string) -1]
         json = file_template.replace("${account}",final_content_string);
         #print(json)
-        if os.path.exists("../gui-config.json"):
-            os.remove("../gui-config.json")
-        write_to_file("../gui-config.json",json);
+        if os.path.exists("account.json"):
+            os.remove("account.json")
+        write_to_file("account.json",json);
     else:
         print("访问ssr帐号失败!")
 

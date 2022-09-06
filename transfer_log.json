@@ -942,5 +942,29 @@
 	"162.245.239.67" : {
 		"totalUploadBytes" : 92047812,
 		"totalDownloadBytes" : 2369464472
+	},
+	"clash30.free4444.xyz" : {
+		"totalUploadBytes" : 20765301,
+		"totalDownloadBytes" : 240942571
+	},
+	"ssrfree3.free4444.xyz" : {
+		"totalUploadBytes" : 471967017,
+		"totalDownloadBytes" : 6638116339
+	},
+	"195.133.11.159" : {
+		"totalUploadBytes" : 1338657,
+		"totalDownloadBytes" : 19408477
+	},
+	"ssr3.ssrfree7.xyz" : {
+		"totalUploadBytes" : 86820,
+		"totalDownloadBytes" : 217740
+	},
+	"ssr2.ssrfree7.xyz" : {
+		"totalUploadBytes" : 57114,
+		"totalDownloadBytes" : 147382
+	},
+	"ssr1.ssrfree7.xyz" : {
+		"totalUploadBytes" : 264880,
+		"totalDownloadBytes" : 6442406
 	}
 }

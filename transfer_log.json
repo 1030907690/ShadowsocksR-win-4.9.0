@@ -966,5 +966,13 @@
 	"ssr1.ssrfree7.xyz" : {
 		"totalUploadBytes" : 264880,
 		"totalDownloadBytes" : 6442406
+	},
+	"ssr1.ssrfree8.xyz" : {
+		"totalUploadBytes" : 1903,
+		"totalDownloadBytes" : 5937
+	},
+	"ssr3.ssrfree8.xyz" : {
+		"totalUploadBytes" : 2150,
+		"totalDownloadBytes" : 1283
 	}
 }
